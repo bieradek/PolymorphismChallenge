@@ -1,5 +1,53 @@
 package com.timbuchalka;
 
+class Car {
+    private String name;
+    private boolean engine;
+    private int cylinders;
+    private int wheels;
+
+    public Car(String name, boolean engine, int cylinders, int wheels) {
+        this.name = name;
+        this.engine = engine;
+        this.cylinders = cylinders;
+        this.wheels = wheels;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isEngine() {
+        return engine;
+    }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+
+    public void startEngine() {
+        System.out.println("Starting the engine");
+    }
+
+    public void accelerate() {
+        System.out.println("Accelerating now");
+    }
+
+    public void brake() {
+        System.out.println("Braking");
+    }
+}
+
+class Porshe extends Car {
+    public Porshe(String name, boolean engine, int cylinders, int wheels) {
+        super(name, engine, cylinders, wheels);
+    }
+}
+
 public class Main {
 
     public static void main(String[] args) {
