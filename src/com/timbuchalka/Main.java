@@ -29,16 +29,16 @@ class Car {
         return wheels;
     }
 
-    public void startEngine() {
-        System.out.println("Starting the engine");
+    public String startEngine() {
+        return "Starting the engine";
     }
 
-    public void accelerate() {
-        System.out.println("Accelerating now");
+    public String accelerate() {
+        return "Accelerating now";
     }
 
-    public void brake() {
-        System.out.println("Braking");
+    public String brake() {
+        return "Braking now";
     }
 }
 
@@ -46,7 +46,65 @@ class Porshe extends Car {
     public Porshe(String name, boolean engine, int cylinders, int wheels) {
         super(name, engine, cylinders, wheels);
     }
+
+    @Override
+    public String startEngine() {
+        return "Starting the engine inside " + getName() + "type of Porshe class";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Accelerating " + getName() + "type of Porshe class";
+    }
+
+    @Override
+    public String brake() {
+        return "Braking " + getName() + "type of Porshe class";
+    }
 }
+
+class Mercedes extends Car {
+    public Mercedes(String name, boolean engine, int cylinders, int wheels) {
+        super(name, engine, cylinders, wheels);
+    }
+
+    @Override
+    public String startEngine() {
+        return "Starting the engine inside " + getName() + "type of Mercedes class";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Accelerating " + getName() + "type of Mercedes class";
+    }
+
+    @Override
+    public String brake() {
+        return "Braking " + getName() + "type of Mercedes class";
+    }
+}
+
+class Masserati extends Car {
+    public Masserati(String name, boolean engine, int cylinders, int wheels) {
+        super(name, engine, cylinders, wheels);
+    }
+
+    @Override
+    public String startEngine() {
+        return "Starting the engine inside " + getName() + "type of Masserati class";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Accelerating " + getName() + "type of Masserati class";
+    }
+
+    @Override
+    public String brake() {
+        return "Braking " + getName() + "type of Masserati class";
+    }
+}
+
 
 public class Main {
 
@@ -67,5 +125,6 @@ public class Main {
         //
         put all classes in one java file
          */
+
     }
 }
