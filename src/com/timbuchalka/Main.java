@@ -43,8 +43,8 @@ class Car {
 }
 
 class Porshe extends Car {
-    public Porshe(String name, boolean engine, int cylinders, int wheels) {
-        super(name, engine, cylinders, wheels);
+    public Porshe(String name) {
+        super(name, true, 4, 4);
     }
 
     @Override
@@ -125,6 +125,11 @@ public class Main {
         //
         put all classes in one java file
          */
+
+        Porshe cayenne = new Porshe("Cayenne");
+        cayenne.startEngine();
+        cayenne.accelerate();
+        cayenne.brake();
 
     }
 }
